@@ -45,8 +45,8 @@ jobs:
           context: .
           push: ${{ github.ref == 'refs/heads/main' }}
           tags: |
-            ghcr.io/bellflight/avr/${{ inputs.container_name }}:latest
-            ghcr.io/bellflight/avr/${{ inputs.container_name }}:${{ env.DATE_TAG }}
+            ghcr.io/nathanvaughn/avr/${{ inputs.container_name }}:latest
+            ghcr.io/nathanvaughn/avr/${{ inputs.container_name }}:${{ env.DATE_TAG }}
           platforms: ${{ inputs.platforms }}
           cache-from: type=gha
           cache-to: type=gha,mode=max

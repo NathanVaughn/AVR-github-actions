@@ -1,7 +1,6 @@
 # github-actions
 
-These are common GitHub Actions workflows used across multiple of
-BellFlight's repositories.
+These are common GitHub Actions workflows used across multiple AVR repositories.
 
 ## Usage
 
@@ -10,7 +9,7 @@ To use a workflow in another, reference it like so:
 ```yml
 jobs:
   job1:
-    uses: bellflight/github-actions/.github/workflows/<workflow>.yml@main
+    uses: nathanvaughn/AVR-github-actions/.github/workflows/<workflow>.yml@main
     with:
       ...
 ```
@@ -25,7 +24,7 @@ The container is only pushed when the workflow is run on a `push` to the `main` 
 
 #### Inputs
 
-- `container_name` (Required): Name to assign to container. This will be prefixed by `ghcr.io/bellflight/avr/`.
+- `container_name` (Required): Name to assign to container. This will be prefixed by `ghcr.io/nathanvaughn/avr/`.
 - `platforms`: Comma-seperated string of platforms to build the container for. Defaults to `linux/amd64,linux/arm64`.
 
 ### AVR Python Checks
